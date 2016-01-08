@@ -6,6 +6,7 @@ body {
   bottom: 0;
   left: 0;
   font-family: "proxima-nova",sans-serif;
+  color: white;
 }
 
 main {
@@ -20,21 +21,20 @@ a {
 }
 
 #projects-container {
-  margin: 0 auto;
+  margin: auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   width: 100%;
+  margin-bottom: 100px;
 }
 
 .project {
   margin: 10px;
   display: inline-block;
   background: white;
-  min-width: 100px;
-  max-width: 250px;
-  min-height: 100px;
-  max-height: 250px;
+  height: 250px;
+  width: 250px;
 /*  width: 30vw;
   height: 30vw;*/
   position: relative;
@@ -43,6 +43,8 @@ a {
 
 .project img {
   margin: auto;
+  width: 90%;
+  height: 90%;
 }
 
 .hoverCover {
@@ -100,8 +102,25 @@ a {
   /*transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.1s;*/
 }
 
-#email {
+#contactContainer {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.contactText {
   text-align: center;
+  /*font-size: calc( 16px + 1vw );*/
+}
+.contactText a {
+  background: rgba(255,255,255,0);
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.1s;
+  text-decoration: none
+}
+.contactText a:hover {
+  background: rgba(255,255,255,.5);
+  box-shadow: 0 0 1.2vw #ffffff;
+  color: turquoise;
 }
 
 @media only screen and (max-device-width: 400px) {
@@ -120,6 +139,30 @@ a {
   .hoverCover {
     font-size: 4vw;
   }
+}
+
+#mugShot {
+  height: 70vw;
+  width: 70vw;
+  min-width: 100px;
+  max-width: 250px;
+  min-height: 100px;
+  max-height: 250px;
+  position: relative;
+  margin: 20px auto;
+}
+
+#mugShot img {
+  width: 100%;
+  height: 100%;
+}
+
+#mugCover {
+  visibility: hidden
+}
+
+#mugCover:hover {
+  visibility: visible
 }
 
 .animate-if.ng-enter, .animate-if.ng-leave {
