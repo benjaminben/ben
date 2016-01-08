@@ -1,0 +1,17 @@
+<div id="projects-container"
+     >
+  <div ng-repeat="project in ben.projects"
+       class="project"
+       ng-mouseover="ben.setSelectedProject($index); $event.stopPropagation()"
+       ng-click="ben.setSelectedProject($index); $event.stopPropagation()"
+       ng-mouseleave="ben.selectedProject = {};">
+    <img src="{{project.picture}}">
+    <div ng-if="$index === ben.selectedProject.index"
+         class="hoverCover animate-if">
+      <p>{{project.title}}</p>
+      <p>{{project.desc}}</p>
+      <p>{{project.tech}}</p>
+      <p><a target="_blank" href="{{project.href}}">{{project.link}}</a></p>
+    </div>
+  </div>
+</div>

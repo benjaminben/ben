@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ben">
+<head>
+  <meta charset="UTF-8">
+  <title>Ben Ben</title>
+
+  <link rel="stylesheet" type="text/css" href="css/ben.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+  <script src="https:////ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-animate.js"></script>
+
+</head>
+
+<body ng-controller="BenController as ben">
+
+  <main>
+    <div id="navbar">
+      <div class="nav" id="projectsLink" ui-sref="projects"><div class="navText">projects</div></div>
+      <div class="nav" id="contactLink" ui-sref="contact"><div class="navText">contact</div></div>
+    </div>
+
+    <ui-view></ui-view>
+  </main>
+
+</body>
+
+<script src="js/ben.js"></script>
+<script src="js/projects.dataservice.js"></script>
+<script src="js/ben.controller.js"></script>
+
+</html>

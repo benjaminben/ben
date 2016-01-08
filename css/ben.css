@@ -1,0 +1,125 @@
+body {
+  background: turquoise;
+  margin: 0px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+main {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+a {
+  color: white;
+}
+
+#projects-container {
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.project {
+  margin: 10px;
+  display: inline-block;
+  background: white;
+  min-width: 100px;
+  max-width: 250px;
+  min-height: 100px;
+  max-height: 250px;
+/*  width: 30vw;
+  height: 30vw;*/
+  position: relative;
+  display: flex;
+}
+
+.project img {
+  margin: auto;
+}
+
+.hoverCover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  box-shadow: 0 0 1.2vw #000000;
+  text-shadow: 1px 1px 1px #555;
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.hoverCover p {
+  margin: auto;
+  width: 80%;
+  font-size: 1em;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  min-height: 100px;
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  flex-grow: 1;
+  margin: auto;
+  text-align: center;
+  min-height: 100px;
+  background: rgba(255,255,255,0);
+  color: white;
+  cursor: pointer;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.1s;
+}
+.nav:hover {
+  background: rgba(255,255,255,.5);
+  box-shadow: 0 0 1.2vw #ffffff;
+  color: green;
+}
+.navText {
+  margin: auto;
+  /*transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.1s;*/
+}
+
+@media only screen and (max-device-width: 375px) {
+  .project{
+    min-width: 70vw;
+    max-width: 70vw;
+    min-height: 70vw;
+    max-height: 70vw;
+  }
+
+  .nav {
+    min-height: 10vh;
+  }
+}
+
+.animate-if.ng-enter, .animate-if.ng-leave {
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.1s;
+}
+
+.animate-if.ng-enter,
+.animate-if.ng-leave.ng-leave-active {
+  opacity:0;
+  box-shadow: 0;
+}
+
+.animate-if.ng-leave,
+.animate-if.ng-enter.ng-enter-active {
+  opacity:.5;
+  box-shadow: 0 0 1.2vw #ffffff;
+}
+
