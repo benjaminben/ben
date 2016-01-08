@@ -16,9 +16,10 @@
         templateUrl: 'templates/projects.html'
       })
       .state('contact', {
-        url: '/contact',
+        url: '^/contact',
         templateUrl: 'templates/contact.html'
       });
+    // $locationProvider.html5Mode(true);
   };
 
 })();

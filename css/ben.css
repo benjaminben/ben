@@ -5,6 +5,7 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
+  font-family: "proxima-nova",sans-serif;
 }
 
 main {
@@ -57,6 +58,7 @@ a {
   text-align: center;
   display: flex;
   flex-flow: column nowrap;
+  font-size: 16px;
 }
 
 .hoverCover p {
@@ -67,10 +69,12 @@ a {
 
 #navbar {
   display: flex;
+  flex-flow: column;
   justify-content: space-around;
   width: 100%;
   min-height: 100px;
   position: relative;
+  margin-bottom: 3vw;
 }
 
 .nav {
@@ -78,32 +82,43 @@ a {
   flex-grow: 1;
   margin: auto;
   text-align: center;
-  min-height: 100px;
+  width: 100%;
+  min-height: 80px;
   background: rgba(255,255,255,0);
   color: white;
   cursor: pointer;
   transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.1s;
+  font-size: calc( 16px + 1vw );
 }
 .nav:hover {
   background: rgba(255,255,255,.5);
   box-shadow: 0 0 1.2vw #ffffff;
-  color: green;
+  color: turquoise;
 }
 .navText {
   margin: auto;
   /*transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.1s;*/
 }
 
-@media only screen and (max-device-width: 375px) {
+#email {
+  text-align: center;
+}
+
+@media only screen and (max-device-width: 400px) {
   .project{
     min-width: 70vw;
     max-width: 70vw;
     min-height: 70vw;
     max-height: 70vw;
+    margin: 2vw;
   }
 
   .nav {
     min-height: 10vh;
+  }
+
+  .hoverCover {
+    font-size: 4vw;
   }
 }
 
