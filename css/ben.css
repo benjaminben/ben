@@ -46,10 +46,10 @@ a {
   margin: 10px;
   display: inline-block;
   background: white;
-  max-width: 100px;
-  max-height: 100px;
-  min-width: 250px;
-  min-height: 250px;
+  min-width: 100px;
+  min-height: 100px;
+  max-width: 250px;
+  max-height: 250px;
   border-radius: 2px;
   position: relative;
   display: -webkit-box;
@@ -190,8 +190,6 @@ a {
 #mugShot {
   min-width: 250px;
   min-height: 250px;
-  width: 50vw;
-  height: 50vw;
   max-width: 300px;
   max-height: 300px;
   position: relative;
