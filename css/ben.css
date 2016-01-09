@@ -33,10 +33,10 @@ a {
   margin: 10px;
   display: inline-block;
   background: white;
-  height: 250px;
-  width: 250px;
-/*  width: 30vw;
-  height: 30vw;*/
+  min-width: 100px;
+  max-width: 250px;
+  min-height: 100px;
+  max-height: 250px;
   position: relative;
   display: flex;
 }
@@ -99,7 +99,6 @@ a {
 }
 .navText {
   margin: auto;
-  /*transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.1s;*/
 }
 
 #contactContainer {
@@ -110,7 +109,6 @@ a {
 
 .contactText {
   text-align: center;
-  /*font-size: calc( 16px + 1vw );*/
 }
 .contactText a {
   background: rgba(255,255,255,0);
