@@ -46,10 +46,15 @@ a {
   margin: 10px;
   display: inline-block;
   background: white;
-  min-width: 100px;
-  max-width: 250px;
-  min-height: 100px;
-  max-height: 250px;
+/*  max-width: 280px;
+  max-height: 280px;
+  min-width: 250px;
+  min-height: 250px;
+  width: 40vh;
+  height: 40vh;*/
+  width: 250px;
+  height: 250px;
+  border-radius: 2px;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -71,6 +76,7 @@ a {
   left: 0;
   color: white;
   background: rgba(0,0,0,0.5);
+  border-radius: 2px;
   box-shadow: 0 0 1.2vw #000000;
   text-shadow: 1px 1px 1px #555;
   text-align: center;
@@ -151,8 +157,10 @@ a {
 
 .contactText {
   text-align: center;
+  font-size: calc( 12px + 1vw );
 }
 .contactText a {
+  border-radius: 3px;
   background: rgba(255,255,255,0);
   transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.1s;
   text-decoration: none
@@ -174,18 +182,22 @@ a {
 
   .nav {
     min-height: 10vh;
+    font-size: 5vw;
   }
 
-  .hoverCover {
+  .hoverCover, .contactText {
     font-size: 4vw;
   }
+
 }
 
 #mugShot {
-  min-width: 100px;
-  max-width: 250px;
-  min-height: 100px;
-  max-height: 250px;
+  min-width: 250px;
+  min-height: 250px;
+  width: 50vw;
+  height: 50vw;
+  max-width: 300px;
+  max-height: 300px;
   position: relative;
   margin: 20px auto;
 }
@@ -218,4 +230,3 @@ a {
   opacity:.5;
   box-shadow: 0 0 1.2vw #ffffff;
 }
-
