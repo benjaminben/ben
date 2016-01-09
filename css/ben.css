@@ -46,14 +46,10 @@ a {
   margin: 10px;
   display: inline-block;
   background: white;
-/*  max-width: 280px;
-  max-height: 280px;
+  max-width: 100px;
+  max-height: 100px;
   min-width: 250px;
   min-height: 250px;
-  width: 40vh;
-  height: 40vh;*/
-  width: 250px;
-  height: 250px;
   border-radius: 2px;
   position: relative;
   display: -webkit-box;
