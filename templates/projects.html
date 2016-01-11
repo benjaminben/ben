@@ -1,7 +1,10 @@
 <!-- <base href="/" /> -->
 <div id="projects-container">
+<!--   <div id="explanationContainer">
+    My names are Ben<br>I build apps using various internets<br>Here are some projects I'm currently working on
+  </div> -->
   <div ng-repeat="project in ben.projects"
-       class="project"
+       class="project animate-repeat"
        ng-mouseover="ben.setSelectedProject($index); $event.stopPropagation()"
        ng-click="ben.setSelectedProject($index); $event.stopPropagation()"
        ng-mouseleave="ben.selectedProject = {};">
