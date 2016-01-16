@@ -38,7 +38,7 @@
     {
       title: "SRiS",
       logo: "",
-      desc: "HTML5 Canvas game with 🙏reverence🙏 to arcade classics",
+      desc: "HTML5 Canvas game made with 🙏reverence🙏 to arcade classics",
       tech: "JavaScript, CSS3, HTML5",
       link: "play",
       href: "http://benjaminben.github.io/sris",
