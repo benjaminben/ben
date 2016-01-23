@@ -18,6 +18,10 @@
       .state('contact', {
         url: '^/contact',
         templateUrl: 'templates/contact.html'
+      })
+      .state('about', {
+        url: '^/about',
+        templateUrl: 'templates/about.html'
       });
     // $locationProvider.html5Mode(true);
   };

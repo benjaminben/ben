@@ -104,9 +104,9 @@ a:hover {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: column;
-      -ms-flex-flow: column;
-          flex-flow: column;
+  -webkit-flex-flow: row;
+      -ms-flex-flow: row;
+          flex-flow: row;
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around;
@@ -125,7 +125,7 @@ a:hover {
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  margin: auto;
+  margin: 0 auto;
   text-align: center;
   width: 100%;
   min-height: 80px;
@@ -142,6 +142,20 @@ a:hover {
 }
 .navText {
   margin: auto;
+}
+
+#fax {
+  min-width: 250px;
+  min-height: 250px;
+  max-width: 300px;
+  max-height: 300px;
+  position: relative;
+  margin: auto;
+}
+
+#faxImg {
+  width: 100%;
+  height: 100%;
 }
 
 #contactContainer {
@@ -162,6 +176,7 @@ a:hover {
 .contactText {
   text-align: center;
   font-size: calc( 12px + 1vw );
+  margin: 0 10px;
 }
 .contactText a {
   border-radius: 3px;
@@ -174,24 +189,49 @@ a:hover {
   box-shadow: 0 0 5px #ffffff;
 }
 
-@media only screen and (max-device-width: 400px) {
-  .project{
-    min-width: 70vw;
-    max-width: 70vw;
-    min-height: 70vw;
-    max-height: 70vw;
-    margin: 2vw;
-  }
+#contactLinksContainer {
+  display: flex;
+  justify-content: center;
+}
 
-  .nav {
-    min-height: 10vh;
-    font-size: 5vw;
-  }
+#aboutContainer {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin: 10px auto;
+  max-width: 500px;
+}
 
-  .hoverCover, .contactText {
-    font-size: 4vw;
-  }
+#aboutTop {
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  max-width: 500px;
+}
 
+#aboutName {
+  font-size: 40px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left:  20px;
+  max-height: 100%;
+  max-width: 500px;
+}
+
+@media screen and (max-width: 530px) {
+  #aboutName {
+    font-size: 4vw
+  }
+}
+
+#aboutText {
+  font-size: 20px;
+  text-align: justify;
+  margin: 20px;
+  width: 80vw;
+  max-width: 500px;
 }
 
 #mugShot {
@@ -200,7 +240,6 @@ a:hover {
   max-width: 300px;
   max-height: 300px;
   position: relative;
-  margin: 20px auto;
 }
 
 #mugShot img {
@@ -247,3 +286,48 @@ a:hover {
 .animate-repeat.ng-enter.ng-enter-active {
   opacity:1;
 }
+
+@media only screen and (max-device-width: 400px) {
+  .project{
+    min-width: 70vw;
+    max-width: 70vw;
+    min-height: 70vw;
+    max-height: 70vw;
+    margin: 2vw;
+  }
+
+  .nav {
+    min-height: 10vh;
+    font-size: 5vw;
+  }
+
+  .hoverCover, .contactText, #aboutText {
+    font-size: 4vw;
+  }
+
+  #aboutContainer {
+    max-width: 80vw;
+    margin-top: 2vw;
+  }
+
+  #aboutText {
+    max-width: 80vw;
+  }
+
+  #aboutTop {
+    max-width: 80vw;
+  }
+
+  #aboutName {
+
+  }
+
+  #mugShot {
+    min-width: 60vw;
+    max-width: 60vw;
+    min-height: 60vw;
+    max-height: 60vw;
+  }
+
+}
+
