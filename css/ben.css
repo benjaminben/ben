@@ -1,12 +1,11 @@
 body {
-  background: #2C9393;
+  background: rgba(255,255,255,1);
   margin: 0px;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   font-family: "proxima-nova",sans-serif;
-  color: #f9f9f9;
 }
 
 main {
@@ -19,6 +18,7 @@ main {
   -webkit-flex-flow: column nowrap;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
+  height: 100vh;
 }
 
 a {
@@ -31,7 +31,7 @@ a:hover {
 }
 
 #projects-container {
-  margin: auto;
+  position: absolute;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -43,26 +43,28 @@ a:hover {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 5vh;
-  position: relative;
-  max-width: 600px
+  bottom: 20px;
+  max-width: 400px;
 }
 
 .project {
-  margin: 10px;
   display: inline-block;
-  background: rgba(255,255,255, .5);
+  background: rgba(220,220,220,1);
   min-width: 100px;
   min-height: 100px;
-  max-width: 250px;
+  width: 20%;
   max-height: 250px;
   border-radius: 2px;
-  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  box-shadow: 0 0 5px #ffffff;
+  box-shadow: 0 0 5px rgba(200,200,200,1);
+  padding: 2%;
+}
+
+.none {
+  opacity: 0;
 }
 
 .project img {
@@ -73,16 +75,11 @@ a:hover {
 
 .hoverCover {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
+  bottom: 100%;
   left: 0;
-  color: #f9f9f9;
-  background: rgba(55,55,55,0.6);
-  border-radius: 2px;
-  box-shadow: 0 0 5px #000000;
+
   text-shadow: 1px 1px 1px #555;
-  text-align: center;
+  text-align: left;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -91,6 +88,11 @@ a:hover {
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   font-size: 16px;
+  height: 50%;
+}
+
+.hoverCover a {
+  color: #2C9393;
 }
 
 .hoverCover p {
@@ -130,7 +132,6 @@ a:hover {
   width: 100%;
   min-height: 80px;
   background: rgba(255,255,255,0);
-  color: #f9f9f9;
   cursor: pointer;
   transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.1s;
   font-size: calc( 16px + 1vw );
@@ -255,6 +256,26 @@ a:hover {
   visibility: visible
 }
 
+#walk {
+  position: absolute;
+  background:url(http://orig06.deviantart.net/6326/f/2015/090/d/6/pokemon_trainer_red_by_thebrianpeedsawesome-d8nvc3a.png);
+  background-size: 400% 400%;
+  width: 100px;
+  height: 100px;
+  right: 0px;
+}
+#walk.up {
+  background-position: 0% 900%;
+}
+#walk.down {
+  background-position: 0% 0%;
+}
+#walk.left {
+  background-position: 0% 300%;
+}
+#walk.right {
+  background-position: 0% 600%;
+}
 .animate-if.ng-enter, .animate-if.ng-leave {
   transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.1s;
 }

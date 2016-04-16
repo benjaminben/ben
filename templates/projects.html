@@ -1,13 +1,18 @@
 <!-- <base href="/" /> -->
+<div id="walk" ng-class="{'up':ben.up, 'left':ben.left, 'down':ben.down, 'right':ben.right}">
+</div>
+
 <div id="projects-container">
 <!--   <div id="explanationContainer">
     My names are Ben<br>I build apps using various internets<br>Here are some projects I'm currently working on
   </div> -->
   <div ng-repeat="project in ben.projects"
+       ng-model="wiggle"
        class="project animate-repeat"
-       ng-mouseover="ben.setSelectedProject($index); $event.stopPropagation()"
-       ng-click="ben.setSelectedProject($index); $event.stopPropagation()"
-       ng-mouseleave="ben.selectedProject = {};">
+       ng-class="{none : $index%2==0}"
+       ng-mouseover="ben.setSelectedProject($index); $event.stopPropagation(); ben.walk($index)"
+       ng-click="ben.setSelectedProject($index); $event.stopPropagation(); ben.walk($index)"
+       ng-mouseleave="ben.selectedProject = {}; ben.up = true">
     <img src="{{project.picture}}">
     <div ng-if="$index === ben.selectedProject.index"
          class="hoverCover animate-if">

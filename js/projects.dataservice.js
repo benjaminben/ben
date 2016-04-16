@@ -9,6 +9,15 @@
   function projectsDataService($log) {
     var projects = [
     {
+      title: "",
+      logo: "",
+      desc: "",
+      tech: "",
+      link: "",
+      href: "",
+      picture: ""
+    },
+    {
       title: "rem",
       logo: "",
       desc: "immersive art showroom displaying mobile VR, compatible with Cardboard",
@@ -16,6 +25,15 @@
       link: "rem.gallery",
       href: "http://rem.gallery",
       picture: "assets/projects/1.png"
+    },
+    {
+      title: "",
+      logo: "",
+      desc: "",
+      tech: "",
+      link: "",
+      href: "",
+      picture: ""
     },
     {
       title: "Pi Radio",
@@ -27,6 +45,15 @@
       picture: "assets/projects/2.png"
     },
     {
+      title: "",
+      logo: "",
+      desc: "",
+      tech: "",
+      link: "",
+      href: "",
+      picture: ""
+    },
+    {
       title: "Fullstaff",
       logo: "",
       desc: "tutorial hub for full-stack musicians: learn to write, mix, and more",
@@ -36,6 +63,15 @@
       picture: "assets/projects/3.png"
     },
     {
+      title: "",
+      logo: "",
+      desc: "",
+      tech: "",
+      link: "",
+      href: "",
+      picture: ""
+    },
+    {
       title: "SRiS",
       logo: "",
       desc: "HTML5 Canvas game made with 🙏reverence🙏 to arcade classics",
@@ -43,7 +79,16 @@
       link: "play",
       href: "http://benjaminben.github.io/sris",
       picture: "assets/projects/4.png"
-    }
+    },
+    {
+      title: "",
+      logo: "",
+      desc: "",
+      tech: "",
+      link: "",
+      href: "",
+      picture: ""
+    },
     ];
     return projects
   };
