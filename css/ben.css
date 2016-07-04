@@ -299,17 +299,8 @@ a:hover {
   background-position: 0% 900%;
   width: 100px;
   height: 100px;
-<<<<<<< HEAD
-  margin: auto;
-  position: fixed;
-  top: 25%;
-  display: block;
-  left: 50%;
-  margin-left: -50px;
-=======
   left: 50%;
   transform: translate(-50%, 0);
->>>>>>> master
 }
 
 #walk.up {
