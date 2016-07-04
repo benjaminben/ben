@@ -170,18 +170,14 @@ a:hover {
 }
 
 #contactContainer {
-  margin-bottom: 5vh;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: column;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  margin: 2em auto;
+  text-align: center;
+}
+#contactContainer .text-cont {
+  display: inline-block;
+  padding: 0.66em 1em;
+  border-radius: 5px;
+  background: rgba(255,255,255,0.8);
 }
 
 .contactText {
@@ -303,13 +299,19 @@ a:hover {
   background-position: 0% 900%;
   width: 100px;
   height: 100px;
+<<<<<<< HEAD
   margin: auto;
   position: fixed;
   top: 25%;
   display: block;
   left: 50%;
   margin-left: -50px;
+=======
+  left: 50%;
+  transform: translate(-50%, 0);
+>>>>>>> master
 }
+
 #walk.up {
   background-position: 0% 900%;
   animation: walkUp 1s steps(1) infinite;
@@ -342,16 +344,7 @@ body.left{
   background-repeat: repeat-x;
   animation: mapLeft 66666666s linear infinite;
 }
-body.right{
-  background-image: url(http://i.imgur.com/ro5bn3v.png);
-  background-repeat: repeat-x;
-  animation: mapRight 66666666s linear infinite;
-}
 
-/*ui-view {
-  display: block;
-  margin: 25%;
-}*/
 .animate-if.ng-enter, .animate-if.ng-leave {
   /*transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.1s;*/
   /*animation: walkLeft 1s steps(1);*/
