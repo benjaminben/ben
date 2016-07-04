@@ -22,7 +22,7 @@ main {
 }
 
 a {
-  color: #f9f9f9;
+  color: #333333;
 }
 
 a:hover {
@@ -160,18 +160,14 @@ a:hover {
 }
 
 #contactContainer {
-  margin-bottom: 5vh;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: column;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  margin: 2em auto;
+  text-align: center;
+}
+#contactContainer .text-cont {
+  display: inline-block;
+  padding: 0.66em 1em;
+  border-radius: 5px;
+  background: rgba(255,255,255,0.8);
 }
 
 .contactText {
@@ -262,8 +258,10 @@ a:hover {
   background-size: 400% 400%;
   width: 100px;
   height: 100px;
-  right: 0px;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
+
 #walk.up {
   background-position: 0% 900%;
 }
@@ -276,6 +274,28 @@ a:hover {
 #walk.right {
   background-position: 0% 600%;
 }
+
+body.up{
+  background-image: url(../assets/projects/hashtag_.jpg);
+  background-repeat: repeat-y;
+  animation: mapUp 66666666s linear infinite;
+}
+body.down{
+  background-image: url(http://i.imgur.com/ro5bn3v.png);
+  background-repeat: repeat-y;
+  animation: mapDown 66666666s linear infinite;
+  }
+body.left{
+  background-image: url(http://i.imgur.com/ro5bn3v.png);
+  background-repeat: repeat-x;
+  animation: mapLeft 66666666s linear infinite;
+}
+body.right{
+  background-image: url(http://i.imgur.com/ro5bn3v.png);
+  background-repeat: repeat-x;
+  animation: mapRight 66666666s linear infinite;
+}
+
 .animate-if.ng-enter, .animate-if.ng-leave {
   transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.1s;
 }
