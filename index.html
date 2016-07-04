@@ -16,7 +16,7 @@
 
 </head>
 
-<body ng-controller="BenController as ben">
+<body ng-controller="BenController as ben" ng-class="{'up':ben.up, 'left':ben.left, 'down':ben.down, 'right':ben.right}">
   <main>
     <div id="navbar">
       <div class="nav" id="aboutLink" ui-sref="about"><div class="navText">about</div></div>

@@ -6,6 +6,8 @@ body {
   bottom: 0;
   left: 0;
   font-family: "proxima-nova",sans-serif;
+  background-position: center center;
+  background-size: cover;
 }
 
 main {
@@ -30,6 +32,12 @@ a:hover {
   transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.1s;
 }
 
+.highlight {
+  display: inline;
+  background: rgba(0,0,0,0.6);
+  line-height: 1.5em;
+}
+
 #projects-container {
   position: absolute;
   display: -webkit-box;
@@ -44,6 +52,7 @@ a:hover {
       -ms-flex-pack: center;
           justify-content: center;
   bottom: 20px;
+  left: 0px;
   max-width: 400px;
 }
 
@@ -62,6 +71,9 @@ a:hover {
   box-shadow: 0 0 5px rgba(200,200,200,1);
   padding: 2%;
 }
+.project:hover {
+
+}
 
 .none {
   opacity: 0;
@@ -77,8 +89,7 @@ a:hover {
   position: absolute;
   bottom: 100%;
   left: 0;
-
-  text-shadow: 1px 1px 1px #555;
+  color: white;
   text-align: left;
   display: -webkit-box;
   display: -webkit-flex;
@@ -133,16 +144,15 @@ a:hover {
   min-height: 80px;
   background: rgba(255,255,255,0);
   cursor: pointer;
-  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.1s;
   font-size: calc( 16px + 1vw );
-}
-.nav:hover {
-  background: rgba(255,255,255,.5);
-  box-shadow: 0 0 5px #ffffff;
-  color: #2C9393;
 }
 .navText {
   margin: auto;
+  border-bottom: 1px solid rgba(0,0,0,0);
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.1s;
+}
+.nav:hover .navText {
+  border-bottom: 1px solid rgba(0,0,0,1);
 }
 
 #fax {
@@ -186,8 +196,8 @@ a:hover {
   text-decoration: none
 }
 .contactText a:hover {
-  background: rgba(255,255,255,.5);
-  box-shadow: 0 0 5px #ffffff;
+/*  background: rgba(255,255,255,.5);
+  box-shadow: 0 0 5px #ffffff;*/
 }
 
 #contactLinksContainer {
@@ -257,27 +267,63 @@ a:hover {
 }
 
 #walk {
-  position: absolute;
   background:url(http://orig06.deviantart.net/6326/f/2015/090/d/6/pokemon_trainer_red_by_thebrianpeedsawesome-d8nvc3a.png);
   background-size: 400% 400%;
+  background-position: 0% 900%;
   width: 100px;
   height: 100px;
-  right: 0px;
+  margin: auto;
+  position: fixed;
+  top: 25%;
+  display: block;
+  left: 50%;
+  margin-left: -50px;
 }
 #walk.up {
   background-position: 0% 900%;
+  animation: walkUp 1s steps(1) infinite;
 }
 #walk.down {
   background-position: 0% 0%;
+  animation: walkDown 1s steps(1) infinite;
 }
 #walk.left {
   background-position: 0% 300%;
+  animation: walkLeft 1s steps(1) infinite;
 }
 #walk.right {
   background-position: 0% 600%;
+  animation: walkRight 1s steps(1) infinite;
 }
+
+body.up{
+  background-image: url(../assets/projects/hashtag_.jpg);
+  background-repeat: repeat-y;
+  animation: mapUp 66666666s linear infinite;
+}
+body.down{
+  background-image: url(http://i.imgur.com/ro5bn3v.png);
+  background-repeat: repeat-y;
+  animation: mapDown 66666666s linear infinite;
+}
+body.left{
+  background-image: url(http://i.imgur.com/ro5bn3v.png);
+  background-repeat: repeat-x;
+  animation: mapLeft 66666666s linear infinite;
+}
+body.right{
+  background-image: url(http://i.imgur.com/ro5bn3v.png);
+  background-repeat: repeat-x;
+  animation: mapRight 66666666s linear infinite;
+}
+
+/*ui-view {
+  display: block;
+  margin: 25%;
+}*/
 .animate-if.ng-enter, .animate-if.ng-leave {
-  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.1s;
+  /*transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.1s;*/
+  /*animation: walkLeft 1s steps(1);*/
 }
 
 .animate-if.ng-enter,
@@ -293,7 +339,7 @@ a:hover {
 .animate-repeat.ng-move,
 .animate-repeat.ng-enter,
 .animate-repeat.ng-leave {
-  transition:all linear 0.5s;
+  /*transition:all linear 0.5s;*/
 }
 
 .animate-repeat.ng-leave.ng-leave-active,
@@ -308,14 +354,55 @@ a:hover {
   opacity:1;
 }
 
+@keyframes walkUp {
+  0%   { background-position: 0% 900%; }
+  25%  { background-position: 300% 900%; }
+  50% { background-position: 600% 900%; }
+  75% { background-position: 900% 900%; }
+}
+@keyframes walkLeft {
+  0%   { background-position: 0% 300%; }
+  25%  { background-position: 300% 300%; }
+  50% { background-position: 600% 300%; }
+  75% { background-position: 900% 300%; }
+}
+@keyframes walkRight {
+  0%   { background-position: 0% 600%; }
+  25%  { background-position: 300% 600%; }
+  50% { background-position: 600% 600%; }
+  75% { background-position: 900% 600%; }
+}
+@keyframes walkDown {
+  0%   { background-position: 0% 000%; }
+  25%  { background-position: 300% 000%; }
+  50% { background-position: 600% 000%; }
+  75% { background-position: 900% 000%; }
+}
+
+@keyframes mapUp {
+  0% { background-position: 0 -500px }
+  100% { background-position: 0 999999999px }
+}
+@keyframes mapLeft {
+  0% { background-position: 0 0 }
+  100% { background-position: 999999999px 0 }
+}
+@keyframes mapDown {
+  0% { background-position: 0 0 }
+  100% { background-position: 0 -999999999px }
+}
+@keyframes mapRight {
+  0% { background-position: 0 0 }
+  100% { background-position: -999999999px 0 }
+}
+
 @media only screen and (max-device-width: 400px) {
+/*  #project-con
   .project{
-    min-width: 70vw;
-    max-width: 70vw;
-    min-height: 70vw;
-    max-height: 70vw;
+    min-width: 40px;
+    min-height: 40px;
     margin: 2vw;
-  }
+  }*/
 
   .nav {
     min-height: 10vh;
