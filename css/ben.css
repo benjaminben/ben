@@ -299,6 +299,7 @@ a:hover {
   background-position: 0% 900%;
   width: 100px;
   height: 100px;
+  position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
 }
