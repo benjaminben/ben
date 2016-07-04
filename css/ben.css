@@ -24,7 +24,7 @@ main {
 }
 
 a {
-  color: #f9f9f9;
+  color: #333333;
 }
 
 a:hover {
@@ -208,6 +208,7 @@ a:hover {
 #aboutContainer {
   margin: 10px auto;
   max-width: 500px;
+  background: rgba(255,255,255,0.8);
 }
 
 #aboutTop {
@@ -237,11 +238,6 @@ a:hover {
   font-size: 0.66em;
 }
 
-@media screen and (max-width: 560px) {
-  #aboutName {
-    flex-flow: row wrap;
-  }
-}
 
 #aboutText {
   font-size: 20px;
@@ -260,16 +256,37 @@ a:hover {
 }
 
 #mugShot {
-  min-width: 250px;
   min-height: 250px;
-  max-width: 300px;
   max-height: 300px;
+  min-width: 250px;
+  max-width: 300px;
   position: relative;
 }
-
 #mugShot img {
   width: 100%;
   height: 100%;
+}
+
+@media screen and (max-width: 500px) {
+  #aboutName {
+    flex-flow: row wrap;
+    margin: 1.66em auto 0;
+  }
+  #mugShot {
+    width:100%;
+    min-height: 250px;
+    max-height: 300px;
+    min-width: 0;
+    max-width: none;
+    overflow: hidden;
+    position: relative;
+  }
+  #mugShot img {
+    width: 100%;
+    top: -10vw;
+    height: 100%;
+    position: relative;
+  }
 }
 
 #mugCover {
